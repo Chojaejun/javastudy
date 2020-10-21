@@ -1,0 +1,31 @@
+package kr.co.ezen;
+
+public class Test12 {
+	
+	int a;
+	boolean b = true;
+	MethodTest mt1;
+	MethodTest mt2 = new MethodTest();
+	
+	
+	
+	public Test12 () {
+		
+		
+	}
+	
+
+	public void sayHello() {
+		System.out.println("안녕하세요.");
+	}
+	
+	public void printScore(String a, int b) {
+		System.out.println(a + " " + b + "점");
+		
+	}
+	
+	
+	
+
+
+}

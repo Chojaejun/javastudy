@@ -1,0 +1,95 @@
+package kr.co.ezen;
+
+import com.naver.MethodTest2;
+import com.naver.MethodTest3;
+
+public class MainEx {
+	public static void main(String[] args) {
+		
+		
+		MethodTest mt1 = new MethodTest();
+		
+		MethodTest mt2 = new MethodTest();
+		
+		MethodTest mt3 = new MethodTest();
+		
+		MethodTest mt4 = new MethodTest();
+		
+		
+		mt1.stand();
+		mt1.sleep();
+		mt1.sayHello();
+		
+		mt2.sitDown();
+		mt2.callName("¡∂¿Á¡ÿ");
+		
+		mt1.printBan(3);
+		
+		
+		
+		mt1.printScore("»´±Êµø", 100);
+		mt2.printScore("±Ë¿ØΩ≈", 100);
+		
+		mt1.sayHello();
+		
+		mt2.printdan(3, 45);
+		
+		
+		mt1.jaeJun("≥ÎπŒ»£", 97.8);
+		mt1.jaeJun("¡∂¿Á¡ÿ", 97.5);
+		
+		mt3.jaeJun("¡∂¿Á¡ÿ", 97.7);
+		mt4.jaeJun("≥ÎπŒ»£", 99.8);
+		
+		mt1.jun("¡∂¿Á¡ÿ");
+		mt2.jun("≥ÎπŒ»£");
+		
+		mt2.chojaejun("¡∂¿Á¡ÿ", "≥ÎπŒ»£");
+		
+		mt1.jojaejun(5);
+		
+		mt3.joon(32);
+		
+		mt4.noon(60);
+		
+		
+		mt3.ezen("¡∂¿Á¡ÿ");
+		mt3.ezen("≥ÎπŒ»£");
+		mt3.ezen("±Ëøµø¯");
+		
+		mt1.stay(2020, 1);
+		
+		mt2.cat("±Ëƒ°");
+		mt1.cat("∞®¿⁄");
+		mt2.cat("±Ëƒ°");
+		
+		
+		Test12 jjj = new Test12();
+		jjj.sayHello();
+		jjj.printScore("±Ë¿ØΩ≈", 100);
+		
+		
+		MethodTest2 mt5 = new MethodTest2();
+		int re1 = mt5.giveMeTheMoney();
+		
+		MethodTest2 mt6 = new MethodTest2();
+		int re2 = mt6.giveMeTheMoney();
+		
+		int re3 = mt5.giveMeTheMoney();
+		
+		MethodTest3 mt7 = new MethodTest3();
+		long re4 = mt7.f();
+		
+		
+				
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+
+}

@@ -58,6 +58,7 @@ public class Person {
 	public String sleep(String where) {
 		String msg = happy.sleep(where);
 		System.out.println(msg);
+		return msg;
 		
 		//sysout(happy.sleep(where));
 	}

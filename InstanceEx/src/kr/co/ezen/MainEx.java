@@ -1,10 +1,6 @@
 package kr.co.ezen;
 
-import java.util.Calendar;
 import java.util.Date;
-
-import javax.print.attribute.standard.MediaSize.Other;
-
 import com.nate.Team;
 import com.naver.Car;
 import com.naver.Person;
@@ -46,6 +42,8 @@ public class MainEx {
 		aTeam.carPrice(bTeam);
 		
 		aTeam.DogGender(bTeam);
+		
+	
 		
 		
 		

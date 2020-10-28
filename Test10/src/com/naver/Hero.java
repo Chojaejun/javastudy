@@ -3,6 +3,8 @@ package com.naver;
 
 public class Hero {
 	private Bow bow;
+	private Spear spear;
+	private Sword sword;
 	
 	public Hero() {
 		// TODO Auto-generated constructor stub
@@ -21,8 +23,32 @@ public class Hero {
 		this.bow = bow;
 	}
 	
+	public Spear getSpear() {
+		return spear;
+	}
+
+	public void setSpear(Spear spear) {
+		this.spear = spear;
+	}
+	
+
+	public Sword getSword() {
+		return sword;
+	}
+
+	public void setSword(Sword sword) {
+		this.sword = sword;
+	}
+
 	public void attack(Monster mon) {
 		bow.attack(mon);
+	}
+	
+	public void attack(Monster mon, Spear spear) {
+		spear.attack(mon);
+	}
+	public void attack(Monster mon, Sword sword) {
+		sword.attack(mon);
 	}
 
 

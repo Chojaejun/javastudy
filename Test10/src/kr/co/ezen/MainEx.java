@@ -3,6 +3,8 @@ package kr.co.ezen;
 import com.naver.Bow;
 import com.naver.Hero;
 import com.naver.Monster;
+import com.naver.Spear;
+import com.naver.Sword;
 
 public class MainEx {
 	public static void main(String[] args) {
@@ -11,9 +13,19 @@ public class MainEx {
 		
 		Bow bow = new Bow();
 		
-		Hero here = new Hero(bow);
+		Hero hero = new Hero(bow);
 		
-		here.attack(mon);
+		hero.attack(mon);
+		
+		Spear spear = new Spear();
+		
+		hero.attack(mon, spear);
+		
+		Sword sword = new Sword();
+		hero.attack(mon, sword);
+		
+		
+		
 	}
 
 }

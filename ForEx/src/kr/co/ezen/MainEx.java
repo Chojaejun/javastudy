@@ -10,7 +10,14 @@ public class MainEx {
 		
 		Test t1 = new Test();
 		t1.me1();
+		System.out.println(":::::::::::::::");
 		t1.me2();
+		
+		System.out.println(">>>>>>>>>>>>>>>");
+		t1.me3();
+		
+		System.out.println(":::::::::::::::::");
+		t1.me6();
 		
 		System.out.println("##############");
 		t1.me4();
@@ -28,6 +35,10 @@ public class MainEx {
 		t2.me4();
 		t2.me3();
 		
+		Test t3 = new Test();
+		t3.me7(3);
+		t3.me71();
+		t3.me8();
 
 	}
 

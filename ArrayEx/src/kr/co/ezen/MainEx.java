@@ -26,6 +26,8 @@ public class MainEx {
 		t1.me01();
 		System.out.println(":::::::::::::::");
 		t1.me13();
+		System.out.println(">>>>>>>>>");
+		t1.me0();
 	}
 
 }

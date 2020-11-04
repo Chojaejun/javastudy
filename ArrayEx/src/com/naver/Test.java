@@ -26,16 +26,16 @@ public class Test {
 		System.out.println(">>>>>>>>>>");
 
 		arrInt[0] = 100;
-		System.out.println(arrInt[0]); // 0
+		System.out.println(arrInt[0]); // 100
 
 		arrInt[1] = 200;
-		System.out.println(arrInt[1]); // 0
+		System.out.println(arrInt[1]); // 200
 
 		arrInt[2] = 300;
-		System.out.println(arrInt[2]); // 0
+		System.out.println(arrInt[2]); // 300
 
 		arrInt[3] = 400;
-		System.out.println(arrInt[3]); // 0
+		System.out.println(arrInt[3]); // 400
 		System.out.println(">>>>>>>>>>>>");
 
 		// arrInt가 갖고 있는 모든 요솟값을 for문을 이용해서 전부 출력하세요.

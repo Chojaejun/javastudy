@@ -45,7 +45,7 @@ public class Test {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
 			/*
-			 * 이러한 메세가 뜨면 배열이구나 
+			 * 이러한 메세지가 뜨면 배열이구나 
 			 * [I@36aa7bc2 
 			 * [I@76ccd017 
 			 * [I@182decdb 

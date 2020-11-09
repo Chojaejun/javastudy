@@ -26,7 +26,4 @@ public class Monster {
 		return "몬스터의 HP: " + hp;
 	}
 	
-	
-	
-
 }

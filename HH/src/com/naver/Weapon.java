@@ -30,6 +30,11 @@ public class Weapon {
 	public void setPower(int power) {
 		this.power = power;
 	}
+
+	@Override
+	public String toString() {
+		return getName();
+	}
 	
 	public void attack(Monster mon) {
 		int bHp = mon.getHp();
@@ -37,4 +42,7 @@ public class Weapon {
 		mon.setHp(aHp);
 		System.out.println("몬스터의 HP: " + aHp);
 	}
+	
+	
+	
 }

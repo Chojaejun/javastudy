@@ -1,7 +1,6 @@
 package com.naver;
 
 public class Bow extends Weapon {
-	
 	public Bow() {
 		// TODO Auto-generated constructor stub
 	}
@@ -11,5 +10,6 @@ public class Bow extends Weapon {
 		// TODO Auto-generated constructor stub
 	}
 	
-
+	
+	
 }

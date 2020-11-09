@@ -12,6 +12,12 @@ public class Gun extends Weapon {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	protected void img() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 	

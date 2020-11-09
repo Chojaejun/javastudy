@@ -7,23 +7,31 @@ public class Hero {
 	Weapon w;
 	
 	public Hero() {
-		weapons = new Weapon[] {new Bow("È°",1),
-				new Sword("°Ë",5), new Gun("ÃÑ",10)};
-		
-		w = weapons[2];
+		// TODO Auto-generated constructor stub
 	}
-	
-	
-	
 	
 	public Hero(Weapon[] weapons, Weapon w) {
 		super();
 		this.weapons = weapons;
 		this.w = w;
 	}
+	
+	
+	public Weapon[] getWeapons() {
+		return weapons;
+	}
 
+	public void setWeapons(Weapon[] weapons) {
+		this.weapons = weapons;
+	}
 
+	public Weapon getW() {
+		return w;
+	}
 
+	public void setW(Weapon w) {
+		this.w = w;
+	}
 
 	public void attack(Monster mon) {
 		

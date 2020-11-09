@@ -1,6 +1,6 @@
 package com.naver;
 
-public class Weapon {
+public abstract class Weapon {
 
 	private String name;
 	private int power;
@@ -35,12 +35,18 @@ public class Weapon {
 	public String toString() {
 		return getName();
 	}
+	
 
-	public void attack(Monster mon) {
+	public final void attack(Monster mon) {
+		img();
 		int bHp = mon.getHp();
 		int aHp = bHp - power;
 		mon.setHp(aHp);
 		System.out.println("몬스터의 HP " + aHp);
 	}
+
+	protected abstract void img();
+	
+	
 
 }

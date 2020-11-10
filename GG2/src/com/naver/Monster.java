@@ -23,7 +23,7 @@ public class Monster {
 
 	@Override
 	public String toString() {
-		return "몬스터의 HP: "+ hp;
+		return "몬스터의 HP: " + hp;
 	}
 	
 	

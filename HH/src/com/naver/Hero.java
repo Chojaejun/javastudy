@@ -16,21 +16,7 @@ public class Hero {
 		this.w = w;
 	}
 
-	public Weapon[] getWeapons() {
-		return weapons;
-	}
-
-	public void setWeapons(Weapon[] weapons) {
-		this.weapons = weapons;
-	}
-
-	public Weapon getW() {
-		return w;
-	}
-
-	public void setW(Weapon w) {
-		this.w = w;
-	}
+	
 	
 	public void attack(Monster mon) {
 		w.attack(mon);

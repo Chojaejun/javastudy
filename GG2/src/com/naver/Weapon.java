@@ -4,7 +4,7 @@ public class Weapon {
 
 	private String name;
 	private int power;
-
+	
 	public Weapon() {
 		// TODO Auto-generated constructor stub
 	}
@@ -35,12 +35,13 @@ public class Weapon {
 	public String toString() {
 		return getName();
 	}
-
+	
 	public void attack(Monster mon) {
 		int bHp = mon.getHp();
 		int aHp = bHp - power;
 		mon.setHp(aHp);
-		System.out.println("몬스터의 HP " + aHp);
+		System.out.println("몬스터의 HP: " + aHp);
 	}
+	
 
 }

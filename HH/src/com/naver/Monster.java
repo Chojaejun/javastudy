@@ -21,9 +21,6 @@ public class Monster {
 		this.hp = hp;
 	}
 
-	@Override
-	public String toString() {
-		return "몬스터의 HP: " + hp;
-	}
+	
 	
 }

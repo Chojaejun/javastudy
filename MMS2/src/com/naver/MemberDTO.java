@@ -11,15 +11,16 @@ public class MemberDTO implements Serializable {
 	private String id;
 	private String name;
 	private int age;
+
+	public MemberDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public MemberDTO(String id, String name, int age) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
-	}
-	
-	public MemberDTO() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getId() {
@@ -79,8 +80,5 @@ public class MemberDTO implements Serializable {
 			return false;
 		return true;
 	}
-	
 
-	
-	
 }

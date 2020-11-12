@@ -5,6 +5,10 @@ import java.util.ArrayList;
 
 public class Test {
 	
+	public void me8(int a) {
+		System.out.println(a);
+	}
+	
 	public void me72(String msg) throws Exception {
 		if(msg.equals("°³»õ³¢")) {
 			throw new DoNotSwearException1("¿å¼³ ±ÝÁö");

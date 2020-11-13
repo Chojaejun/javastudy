@@ -14,11 +14,21 @@ public class UpdateCommand implements Command {
 		
 		System.out.println("새로운 age를 입력하세요.");
 		int age = sc.nextInt();
+		sc.nextLine();
 		
 		MembetDTO dto = new MembetDTO(id, name, age);
 		
 		int idx = DB.db.indexOf(new MembetDTO(id, name, age));
-		DB.db.set(idx,dto);
+		MembetDTO mbt = DB.db.set(idx,dto);
+	
+		
 	}
+	
+	@Override
+	public String toString() {
+		return "수정";
+	}
+	
+	
 
 }

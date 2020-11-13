@@ -16,5 +16,11 @@ public class DeleteCommand implements Command {
 			System.out.println(id + " 삭제 실패");
 		}
 	}
+	@Override
+	public String toString() {
+		return "삭제";
+	}
+	
+	
 
 }

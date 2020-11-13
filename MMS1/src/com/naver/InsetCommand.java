@@ -19,5 +19,10 @@ public class InsetCommand implements Command {
 		MembetDTO dto = new MembetDTO(id, name, age);
 		DB.db.add(dto);
 	}
+	
+	@Override
+	public String toString() {
+		return "µî·Ï";
+	}
 
 }

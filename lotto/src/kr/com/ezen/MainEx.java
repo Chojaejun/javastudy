@@ -1,4 +1,4 @@
-package kr.co.ezen;
+package kr.com.ezen;
 
 import com.naver.Test;
 
@@ -9,13 +9,7 @@ public class MainEx {
 		
 		Test t1 = new Test();
 		
-		t1.me1();
-		
-		t1.me2();
-		
-		t1.me3();
-		
-		t1.me4();
+		t1.lottory();
 
 	}
 

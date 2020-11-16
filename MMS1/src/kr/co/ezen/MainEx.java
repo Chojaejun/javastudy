@@ -48,6 +48,7 @@ public class MainEx {
 	               break;
 	            }
 	            list.get(idx).execute(sc);
+	            //coms[idx].execute(sc);
 
 	         }
 	      } catch (Exception e) {

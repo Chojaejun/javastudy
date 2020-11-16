@@ -2,27 +2,25 @@ package com.naver;
 
 import java.io.Serializable;
 
-public class Apple implements Serializable, Comparable<Apple> {//순서대로 정렬할 때 Comparable< >적기 **제네릭 타입이 우리가 만든 메서드면 추가하기**
-
+public class Dog implements Serializable, Comparable<Dog>{
+	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private String id;
-	private String addr;
 	private String name;
-	private int price;
+	private String master;
+	private	int age;
 	
-	public Apple() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
-	public Apple(String id, String addr, String name, int price) {
+	public Dog(String id, String name, String master, int age) {
 		super();
 		this.id = id;
-		this.addr = addr;
 		this.name = name;
-		this.price = price;
+		this.master = master;
+		this.age = age;
 	}
 
 	public String getId() {
@@ -33,14 +31,6 @@ public class Apple implements Serializable, Comparable<Apple> {//순서대로 정렬할
 		this.id = id;
 	}
 
-	public String getAddr() {
-		return addr;
-	}
-
-	public void setAddr(String addr) {
-		this.addr = addr;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -49,22 +39,31 @@ public class Apple implements Serializable, Comparable<Apple> {//순서대로 정렬할
 		this.name = name;
 	}
 
-	public int getPrice() {
-		return price;
+	public String getMaster() {
+		return master;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setMaster(String master) {
+		this.master = master;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return id + " : "+ addr + " : " + name;
-		
+		return "Dog [id=" + id + ", name=" + name + "]";
 	}
 
 	@Override
@@ -83,7 +82,7 @@ public class Apple implements Serializable, Comparable<Apple> {//순서대로 정렬할
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Apple other = (Apple) obj;
+		Dog other = (Dog) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -91,15 +90,11 @@ public class Apple implements Serializable, Comparable<Apple> {//순서대로 정렬할
 			return false;
 		return true;
 	}
-
 	@Override
-	public int compareTo(Apple o) {
+	public int compareTo(Dog o) {
 		// TODO Auto-generated method stub
 		return this.getId().compareTo(o.getId());
-//		return this.getId().compareTo(o.getId())*(-1); 입력 값이 높은 것부터 낮은 순으로 나오게 하기.
 	}
-	
-	
 	
 
 }

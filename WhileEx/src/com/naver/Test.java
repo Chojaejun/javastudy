@@ -67,7 +67,7 @@ public class Test {
 	public void star() {
 		int i = 0;
 		while(i<10) {
-			System.out.print('*');
+			System.out.print('*');//줄로 나열하기
 			i++;
 		}
 		System.out.println();//줄바꿈

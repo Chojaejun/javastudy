@@ -2,13 +2,14 @@ package com.naver;
 
 import java.io.Serializable;
 
-public class MemberDTO implements Serializable {
+public class MemberDTO implements Serializable{
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	private String id;
+	private static final long serialVersionUID = 1L; // 한번 정해 놓으면 바꾸면 안된다.(바꾸면 뜨는 에러는 InvalidClassException)
+	
+	private transient String id; // transient : 너무 중요해서 외부로 유출되는 것을 막을 때 사용 --> 출력시 값은 null
 	private String name;
 	private int age;
 	
@@ -50,11 +51,8 @@ public class MemberDTO implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
-	@Override
-	public String toString() {
-		return "MemberDTO [id=" + id + ", name=" + name + "]";
-	}
+	
+	
 
 	@Override
 	public int hashCode() {
@@ -80,7 +78,17 @@ public class MemberDTO implements Serializable {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "MemberDTO [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
 	
 	
 	
+	
+	
+	
+	
+
 }

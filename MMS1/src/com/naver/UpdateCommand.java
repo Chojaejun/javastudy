@@ -16,10 +16,10 @@ public class UpdateCommand implements Command {
 		int age = sc.nextInt();
 		sc.nextLine();
 		
-		MembetDTO dto = new MembetDTO(id, name, age);
+		MemberDTO dto = new MemberDTO(id, name, age);
 		
-		int idx = DB.db.indexOf(new MembetDTO(id, name, age));
-		MembetDTO mbt = DB.db.set(idx,dto);
+		int idx = DB.db.indexOf(new MemberDTO(id, name, age));
+		DB.db.set(idx,dto);
 	
 		
 	}

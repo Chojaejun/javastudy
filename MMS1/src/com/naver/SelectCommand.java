@@ -8,7 +8,7 @@ public class SelectCommand implements Command {
 	public void execute(Scanner sc) {
 
 		for(int i = 0; i < DB.db.size(); i++) {
-			MembetDTO dto = DB.db.get(i);
+			MemberDTO dto = DB.db.get(i);
 			System.out.println(dto);
 		}
 		

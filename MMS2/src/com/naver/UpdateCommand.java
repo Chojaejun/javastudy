@@ -19,7 +19,7 @@ public class UpdateCommand implements Command {
 		MemberDTO dto = new MemberDTO(id, name, age);
 		
 		int idx = DB.db.indexOf(new MemberDTO(id, name, age));
-		MemberDTO mbt = DB.db.set(idx, dto);
+		DB.db.set(idx, dto);
 		
 		
 		

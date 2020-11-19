@@ -16,7 +16,7 @@ public class InsetCommand implements Command {
 		int age = sc.nextInt();
 		sc.nextLine();
 		
-		MembetDTO dto = new MembetDTO(id, name, age);
+		MemberDTO dto = new MemberDTO(id, name, age);
 		DB.db.add(dto);
 	}
 	

@@ -11,6 +11,8 @@ public class MainEx {
 		Test t1 = new Test();
 		Test1 t2 = new Test1();
 		
+		t1.me6();
+		
 //		long a = System.currentTimeMillis();
 //		t1.me2();
 //		long b = System.currentTimeMillis();
@@ -21,7 +23,6 @@ public class MainEx {
 //		b = System.currentTimeMillis();
 //		System.out.println(b-a);
 		
-		t1.me5();
 		
 
 	}

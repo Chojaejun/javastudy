@@ -53,7 +53,7 @@ public class MemberDTO implements Serializable {
 
 	@Override
 	public String toString() {
-		return "MemberDTO [id=" + id + ", name=" + name + "]";
+		return "MembetDTO [id=" + id + ", name=" + name + "]";
 	}
 
 	@Override
@@ -83,4 +83,5 @@ public class MemberDTO implements Serializable {
 	
 	
 	
+
 }

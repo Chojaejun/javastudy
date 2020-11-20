@@ -1,0 +1,125 @@
+1. ..의 의미는?
+ 내 답 : 이전 폴더로 이동
+ 답 : 현재 폴더(디렉토리)의 직전 상위 폴더(디렉토리)
+
+2. c:\AAA\bbb\ccc 이런 경로(path)가 있다.
+현재 디렉토리는 무엇인가?
+ 내 답  : ccc
+ 답 : ccc
+
+3. cmd(command, 명령프롬프트)에서
+cd..의 의미는?
+ 내 답 : 상위 폴더로 이동
+ 답 : 경로(path)를 현재 경로의 상위 디렉토리로 변경하라는 의미
+
+4. c:\AAA\bbb\ccc 현재 경로
+   cd..
+   현재 경로는?
+ 내 답 : c:\AAA\bbb
+ 답 : c:\AAA\bbb
+
+5. c:\AAA\bbb\ccc 현재 경로
+   . (현재 디렉토리)
+ 답 :  c:\AAA\bbb\ccc
+
+6. c:\AAA\bbb\ccc 현재 경로
+현재 경로를 c:\zzz\xxx 로 변경하려고 합니다.
+cmd에서의 명령을 입력해 보세요.
+ 답 : cd c:\zzz\xxx
+
+7. git & github
+ git 설치: git-scm.com
+
+8. git 설치할 때... default 값으로 설정
+
+9. global  변수 설정
+   git config --global user.name
+   git config -- global user.email
+   왜?
+   git은 버전관리 시스템인데, 자기 혼자도 관리를 할 수도 있지만 팀 단위로 관리
+
+10. global  변수 설정한 후에 설정값을 보고 싶을 때 사용하는 명령
+  git config --list
+
+11. 잘못해서 삭제하고 싶을 때
+git --global --unset user.name "jjj"
+
+12. 현재 경로가 c:\aaa\bbb\ccc
+ mkdir ddd
+c:\aaa\bbb\ccc 안에 ddd 디렉토리가 만들어짐.
+
+13. ddd디렉토리로 지정하고 싶을 때
+ cd c:\aaa\bbb\ccc\ddd 입력
+ cd ddd
+
+mkdir  c:\gitStudy
+왜 만들었나?
+git 로컬 저장소(레파지토리, repository)
+    원격 저장소(remote repository, github)
+
+git 과 연동이 되어 있을까?
+gitStudy를 git의 로컬 레파지토리로 설정하려면
+명령문을 어떻게 입력해야 하는가?
+git init
+
+git local repository에 내용이 변경되었다.
+git status (변경 된 상태확인)
+
+이를 staging 하려면 어떤 명령문을 입력해야 하는가?
+git add 파일명
+git add hello.txt
+git add * (변경 한 파일이 많을 때)
+
+git status
+
+모든 작업이 끝남..(특정 기능 구현이 완성)
+git commit(enter)
+vim 
+i(insert)
+입력..
+esc
+:wq(enter)
+
+git commit -m "hello.txt create"
+
+git status
+
+git log
+
+git log -p
+
+=============================
+
+작업 - add - commit
+
+git checkout -- 파일명
+
+안녕
+안녕하세요
+안녕하세요! (commit)
+안녕하세요! 세상에~ (저장 후 add 전)
+
+작업 - add
+안녕
+안녕하세요
+안녕하세요! (commit)
+안녕하세요! 세상에~ (add 후 commit 전)
+git reset head 파일명
+git checkout -- 파일명
+
+
+작업 - add - commit - push(github)
+작업 - add
+안녕
+안녕하세요
+안녕하세요! (commit)
+안녕하세요! 세상에~ (commit 후 push 전)
+git reset --hard HEAD~1
+
+안녕
+안녕하세요
+안녕하세요! (commit)
+branch 개념을 도입
+다른 branch로 업그레이드 작업, 에러 작업 등을 별도로 하게 함.
+
+git 

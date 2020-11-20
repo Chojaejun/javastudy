@@ -1,0 +1,68 @@
+상수
+인터페이스
+public 추상메서드로 이루어진 자료 구조..
+interface
+interface has constructors.(X)
+인터페이스도 다형성 지원..
+오버라이딩 지원됨.
+인터페이스는 다중상속을 지원함.
+1. 진짜 인터페이스가 여러 개의 인터페이스를 상속
+public interfac Inter1 extends Inter3, Inter2{ }
+2. 클래스가 여러 개의 인터페이스를 구현
+public clss Child implements Inter3, Inter2{ }
+
+===========
+public class Show extends Object implements Inter 32{
+
+}
+
+class -> class extends
+interface -> interfac extends
+class -> interface implements
+
+익명의 내부 클래스
+클래스는 구조적으로 "class" 키워드가 있어야 클래스이다.
+익명의 내부 클래스는 "class" 키워드가 없기 때문에
+"익명"의 내부 클래스라고 한다.
+
+두가지 종류
+변수를 선언하면서 쓰는 익명의 내부 클래스 : 가짜 익명의 내부클래스
+변수 선언 없이 사용하는 익명의 내부 클래스 : 진짜 익명의 내부클래스
+
+
+try ~ catch : 개발자의 잘못을 처리하기 위해 사용해서는 안 됨.
+문법적으로 이상이 없지만,
+논리적으로 이상이 있을 경우...사용
+
+사용자로부터 데이터를 입력받는데,
+사용자가 잘못된 데이터를 입력했을 때를 대비해서 사용
+
+1. try ~ catch : 예외가 발생했어도 예외가 없는 것과 같은 효과
+- try : 예외가 발생할 수도 있는 코드
+- catch : 예외가 발생할 때 실행할 코드
+
+2. throws : 예외가 발생했을 때, 해당 메서드를 호출한 곳에서 예외처리를 하도록
+예외를 던져줌.
+
+3. finally : 예외가 발생하든 그렇지 않든 항상 실행해야 하는 코드는 finally에 구현.
+	return보다 더 강력함.
+
+4. throw : 문법적으로 예외는 아니지만, 논리적인 예외를 발생시키는 기능
+
+5. 사용자 정의 예외 클래스 : 가능하면 Exception을 상속하다록 하여, throws를 날리
+도록 구현하라. 그러면 호출하는 메서드에서 try ~ catch 작업이 가능하니까.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+
+1. 자료형의 종류를 기술하시오.
+기본자료형
+- boolean,char,byte,short,int,long,float,double
+참조자료형
+- 기본자료형을 제외한 자료형
+
+2. 정수형 변수 a에 자료형에 맞는 값 중 하나를 적으시오.
+30
+
+3. long 형에 맞는 값 중 하나를 적으시오.
+30L
+
+4. float 형에 맞는 값을 하나 적으시오.
+3.14f
+
+5. boolean  형에 맞는 값 두 개르를 적으시오.
+true,false
+
+6. char 형에 맞는 값을 하나 적으시오.
+'한'
+
+7. Dog형에 맞는 값을 하나 적으시오.
+new Dog( )
+
+8. String 형에 맞는 값을 하나 적으시오.
+"hello", new String("hello");
+
+9. Cat형에 맞는 값을 하나 적으시오.
+new Cat( )
+
+10. Pig형에 맞는 값을 하나 적으시오.
+new Pig( )
+
+11. Car형에 맞는 값을 하나 적으시오.
+new Car( )
+
+12. Apple형에 맞는 값을 하나 적으시오.
+new Apple( )
+
+13. 클래스 Dosirak의 디폴터 생성자를 적으시오.
+public Dosirak( ) {
+
+}
+
+14. 클래스 Gost의 디폴터 생성자를 적으시오.
+public Gost( ) {
+
+}
+
+15. 클래스 Member의 디폴터 생성자를 적으시오.
+public Member( ) {
+
+}
+
+16. 무반환 무파람 메서드 showMetheMoney( )를 작성하고 호출 코드도 작성하시오.
+     - 단, 실행 내용은 "500원" 출력
+     - 단, showMetheMoney( )는 Bank클래스의 메서드이다.
+
+      public void showMetheMoney( ) {
+             system.out.println("500원");
+}
+
+===========================
+bank mt1 = new bank( );
+  mt1.bank( );
+
+17. 무반환 유파람 메서드 setName( )를 작성하고 호출 코드도 작성하시오.
+    - 단, 실행 내용은 this.name = name;
+    - 단, setName( )는 Member클래스의 메서드이다.
+
+public void setName(String name) {
+           this.name = name;
+}
+
+Member b = new Member( );
+b.setName("홍길동");
+
+
+18. 유반환 무파람 메서드 getBoard( )를 작성하고 호출 코드도 작성하시오.
+    - 단, 실행 내용은 Board클래스의 객체를 반환한다.
+    - 단, getBoard( )는 Board클래스의 메서드이다.
+
+public Board getBoard( ) {
+     
+           return new Board( );
+
+}
+
+Board b = new Board( );
+
+Board b2 = b.getBoard( );
+

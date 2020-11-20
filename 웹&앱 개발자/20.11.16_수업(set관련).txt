@@ -1,0 +1,28 @@
+Set -> HashSet
+
+Set<참조자료형> set = new HashSet<참조자료형>( );
+
+- 중복된 데이터를 허용하지 않음.
+- 입력과 출력 사이에 상관관계가 없음. Index가 없음.
+- get( ) XXXXXXXXXXXXX -> iterator( )
+- add( ) 입력
+- size( ) 크기
+- remove( ):
+  - list에서 remove(int idx), remove(Object obj)
+  - set에는 index가 없음. 따라서 remove(int idx)는 존재하지 않음.
+remove(Object obj)만 존재함..
+**동등성 비교(참조자료형)
+**동일성 비교(기본자료형)
+
+iterator( ): Iterator 인터페이스 자료형으로 데이터 반환.
+---반환자...
+while문을 이용해서 set 데이터를 획득..
+eclipse에서도 이를 지원합니다.
+
+Lotto
+1~45
+각기 다른 숫자 6개 뽑기..
+int num = rnd.nextInt(max-min+1)+min;
+
+======================
+

@@ -1,0 +1,86 @@
+변수:
+50 %...
+
+1. 변수가 왜 중요한가?
+"hello" > "what"
+"what" > "hello"
+유지 보수를 위해
+
+2. 변수 선언 예
+String msg = "hello"
+int msg = 123
+
+3.변수 선언 공식
+주석 처리한 후 변수 선언 공식
+자료형 변수명 = 자료형에 맞는 값;
+값에 맞는 자료형 변수명 = 값;
+
+
+String(문자열)
+String msg = "hello";
+String msg2 = "hi";
+
+ex) package kr.co.ezen;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+                    String msg = "11";
+                   
+                    System.out.println(msg+msg);
+                    = 1111
+
+
+
+int(자료형)
+int msg = 11
+int msg2 = 11
+
+ex) package kr.co.ezen;
+
+public class MainEx {
+
+	public static void main(String[] args) {
+                    int msg = 11;
+                   
+                    System.out.println(msg+msg);
+                    = 22
+
+--------------
+
+4. 모르는 것.
+자료형의 종류
+
+기본자료형(primitive)
+boolean: true(참), false(거짓)
+boolean a = true;
+boolean b = false;
+이 둘 중에 하나의 데이터만 넣을 수 있다.
+
+char: 한 글자 '한'
+======================
+
+정수형
+byte (1byte = 8bit)
+-128 ~ 127
+short (2byte)
+int (4byte / 정수형의 기본자료형)
+-2^31 ~ 2^31-1 (+-21억까지 표현 가능)
+long (8byte)
+long aaa = 2500000000L; (O) / 2500000000;(X)
+long형에 맞는 값은 숫자 뒤에 L/l을 써줘야 한다.
+==========
+엄청 큰 정수를 사용하고 싶으면 BigInteger 사용(쓸 일은 딱히 없음)
+===============
+실수형(정밀도) 
+float: 값 뒤에 F/f를 써줘야 한다. 
+       (정밀도가 중요하지 않을 때 / 4byte)
+
+double: 실수형의 기본 자료형
+       (정밀도가 중요할 때 / 8byte)
+        ex) double bbb = 3.14
+
+참조자료형(referece)
+-기본 자료형이 아닌 자료형
+
+

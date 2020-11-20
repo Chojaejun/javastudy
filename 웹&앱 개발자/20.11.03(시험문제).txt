@@ -1,0 +1,96 @@
+
+1. 배열의 첫번째 방법을 쓰시오.
+type[ ] 배열명 = new 자료형[배열의 크기];
+
+2. 배열의 크기를 구하는 속성
+length
+
+3. 배열의 두번째 방법을 쓰시오.
+type[ ] 배열명 = {val1, val2, ...};
+
+4. 인덱스의 최대값 구하는 방법
+(arr.length-1);
+
+5. 인덱스의 요솟값의 최대값 구하는 방법
+(arr[arr.length -1])
+
+6. 배열의 3번째 방법
+type[ ] 배열명 = new 자료형[ ] {val1, val2, ...};
+
+7. 인덱스 3의 요솟값 출력하기
+sysout(arr[3]);
+
+8. arr인덱스 0에 new Dog("hello", 1, true, "seoul"); 대입
+arr[0] = new Dog("hello", 1, true, "seoul");
+
+9. 위의 자료형 값을 쓰시오.
+Dog[ ]
+
+10. 인덱스의 모든 요솟값을 구하시오
+for(int = 0; int <arr.length; i++) {
+ 
+sysout(arr[i]);
+ }
+
+11. 인덱스의 모든 요솟값을 구하시오
+     단, 인덱스 3의 요솟값을 제외
+
+for(int = 0; int <arr.length; i++) {
+if(i == 3) {
+ 
+continue
+}
+ sysout(arr[i]);
+ }
+
+1.인덱스의 모든 요솟값을 구하시오
+  단, 요솟값이 true일 때 출력금지
+for(int = 0; int <arr.length; i++) {
+
+ if(arr[i]){
+
+   continue
+ }
+
+ sysout(arr[i]);
+ }
+             
+7.int[ ][ ][ ][ ] arr = new int [5][ ][ ][ ];
+arr에는 X차원 배열이 Y개 들어 있다.
+
+X? 3
+Y? 5
+
+8.array arr의 마지막 인덱스의 요솟값의 name을 "홍길동"으로 수정하시오.
+arr[arr.length -1].setName("홍길동");
+
+- 배열의 마지막 인덱스를 구하는 식을 알아야함. : arr.length -1
+- 배열의 요솟값에 접근하는 방법을 알아야함. : arr[idx] ===> arr[arr.length -1]
+- 객체의 자원에 접극하는 방법을 알아야함. : arr[arr.length -1].setName("홍길동");
+- 객체의 자원을 수정하는 방법을 알아야함.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

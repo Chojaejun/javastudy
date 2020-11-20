@@ -1,0 +1,166 @@
+C:\Users\EZEZ>sqlplus  <-- oracle sql*plus에 접속하고자 한다.
+
+SQL*Plus: Release 11.2.0.2.0 Production on 금 11월 20 09:49:01 2020
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter user-name: system <-- oracle DATABASE 설치시 입력했던 user-name 입력
+Enter password:  <-- oracle DATABASE 설치시 입력했던 password 입력
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> CREATE USER ezen IDENTIFIED BY ezen;  <-- 사용자 계정 생성( CREATE USER 사용할 이름 IDENTIFIED BY 비밀번호)
+
+User created.
+
+SQL> DROP USER ezen;  <-- 사용자 삭제 ( DROP USER 사용자이름)
+
+User dropped.
+
+SQL> CREATE USER ezen IDENTIFIED BY ezen;  <-- 사용자 계정 생성( CREATE USER 사용할 이름 IDENTIFIED BY 비밀번호)
+
+User created.
+
+SQL> show user  <-- 현재 유저 확인 
+USER is "SYSTEM"  <-- 현재 유저
+SQL> conn ezen/ezen  <-- 사용 유저 변경 (conn 사용할 계정/비밀번호)
+ERROR:  <-- 권한 부여를 하지 않았으므로 당연히 뜨는 에러
+ORA-01045: user EZEN lacks CREATE SESSION privilege; logon denied
+
+Warning: You are no longer connected to ORACLE.
+
+SQL> show user  <-- 현재 유저 확인 
+USER is ""  <-- 권한이 부여하지 않은 ezen사용자로 변경해서 아무것도 사용자도 있지 않음.
+SQL> conn system/sys1234 <-- 사용 유저 변경 (conn 사용할 계정/비밀번호)
+Connected.
+SQL> show user  <-- 현재 유저 확인 
+USER is "SYSTEM"  <-- 현재 유저
+
+SQL> GRANT CONNECT, RESOURCE, DBA TO ezen;  <-- ezen 사용자에 권한 부여 ( GRANT CONNECT, RESOURCE, DBA TO 사용자이름;)
+
+Grant succeeded.
+
+SQL> conn ezen/ezen  <-- 사용 유저 변경 (conn 사용할 계정/비밀번호)
+Connected.
+SQL> show user  <-- 현재 유저 확인
+USER is "EZEN"  <-- 현재 유저
+SQL> conn system/sys1234  <-- 사용 유저 변경 (conn 사용할 계정/비밀번호)
+Connected.
+SQL> show user  <-- 현재 유저 확인
+USER is "SYSTEM"  <-- 현재 유저
+
+SQL> conn ezen/ezen  <-- 사용 유저 변경 (conn 사용할 계정/비밀번호)
+Connected.
+SQL> show user  <-- 현재 유저 확인
+USER is "EZEN"  <-- 현재 유저
+SQL> CREATE TABLE tbl_member(  <-- 테이블 안에 구조 넣기 (CREATE TABLE tbl_member = 멤버 테이블에 입력( <-- ( 무엇을 넣는지 시작
+  2  id varchar2(6),		      <-- 테이블 안에 구조 넣기 ( id 에 입력할 수 있는 값은 varchar2=문자 (6)=영문,숫자는 6문자, 한글은 2글자)
+  3  name varchar2(15),	      <-- 테이블 안에 구조 넣기 (name 에 입력할 수 있는 값은 varchar2=문자 (15)=영문,숫자는15문자, 한글은 5글자)
+  4  age number		      <-- 테이블 안에 구조 넣기 (age 에 입력할 수 있는 값은 number=숫자)
+  5  );			      <-- 테이블 안에 구조 넣기 ( 무엇을 넣고);  <-- 넣는 거 끝)
+
+Table created.
+
+SQL> desc tbl_member  <-- 만든 테이블 구조 확인
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 VARCHAR2(6)
+ NAME                                               VARCHAR2(15)
+ AGE                                                NUMBER
+
+SQL> DROP TABLE tbl_member;  <-- tbl_member 테이블 삭제
+
+Table dropped.
+
+SQL> CREATE TABLE member(  <-- 테이블 구조 만들기
+  2  mid varchar2(6),
+  3  name varchar2(15),
+  4  job varchar2(3),
+  5  birth date
+  6  );
+
+Table created.
+
+SQL> INSERT INTO member (mid) VALUES ('m001');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member (mid, name) VALUES ('m001', 'kim');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member (mid, name, job) VALUES ('m002', 'lee', 'a');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member (mid, name, job, birth) VALUES ('m004', 'park', 'b', '2000-12-17');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member VALUES ('m005');  <-- 테이블 구조에 있는 입력 값 전부를 입력할 수 있는 법의 잘못된 예
+INSERT INTO member VALUES ('m005')
+            *
+ERROR at line 1:  <-- 테이블 구조에 있는 입력 값을 전부 넣지 않으면 에러가 뜸
+ORA-00947: not enough values
+
+
+SQL> INSERT INTO member VALUES ('m005', 'kang', 'a', '1990-10-03');  <-- 테이블 구조에 입력 값 전부 입력하는 법
+
+1 row created.
+
+SQL> SELECT * FROM member;  <-- 테이블 구조에 입력값을 넣은 후 확인하는 법
+
+MID          NAME                           JOB    BIRTH
+------------ ------------------------------ ------ --------
+m001
+m001         kim
+m002         lee                            a
+m004         park                           b      00/12/17
+m005         kang                           a      90/10/03
+
+SQL> rollback;  <-- 가장 최근에 commit 한 곳까지 돌아가는 명령어
+
+Rollback complete.
+
+SQL> SELECT * FROM member;  <-- 테이블 구조에 입력 값 넣은 후 확인 
+
+no rows selected  <-- 방금 rollback;으로 가장 최근 commit한 곳으로 돌아갔지만 commit한 곳이 없어 테이블 구조에 입력 값이 없음.
+
+SQL> desc member  <-- 테이블 구조 확인
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ MID                                                VARCHAR2(6)
+ NAME                                               VARCHAR2(15)
+ JOB                                                VARCHAR2(3)
+ BIRTH                                              DATE
+
+SQL> INSERT INTO member(mid) VALUES('m001');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member(mid, name) VALUES('m002', 'kim');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member(mid, name, job) VALUES('m003', 'lee', 'a');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member(mid, name, job, birth) VALUES('m004', 'park', 'b', '2000-12-17');  <-- 테이블 구조에 입력값 넣기
+
+1 row created.
+
+SQL> INSERT INTO member VALUES ('m005', 'kang', 'a', '1990-10-03');  <-- 테이블 구조에 입력 값 전부 입력하는 법
+
+1 row created.
+
+SQL> SELECT * FROM member;  <-- 테이블 구조에 입력 값 확인
+
+MID          NAME                           JOB    BIRTH
+------------ ------------------------------ ------ --------
+m001
+m002         kim
+m003         lee                            a
+m004         park                           b      00/12/17
+m005         kang                           a      90/10/03

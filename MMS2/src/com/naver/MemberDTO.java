@@ -83,4 +83,5 @@ public class MemberDTO implements Serializable {
 	
 	
 	
+	
 }

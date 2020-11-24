@@ -143,6 +143,198 @@ age가 25보다 크거나 같고 47보다 작거나 같은 레코드를 조회하시오.
 
 SELECT * FROM test WHERE age >= 25 AND age <= 47
 
+test 테이블에서 
+age가 25보다 크거나 같고 47보다 작거나 같은 레코드를 조회하시오.
+
+BETWEEN A AND B
+
+SELECT * FROM test WHERE age BETWEEN 25 AND 47
+
+SELECT * FROM test WHERE name LIKE 'k__'
+
+SELECT * FROM test WHERE name LIKE '_e___'
+
+SELECT * FROM test WHERE name LIKE '_e_'
+
+SELECT * FROM test WHERE name LIKE '%o'
+
+SELECT * FROM test WHERE name LIKE '%초%'
+
+SELECT * FROM test WHERE name LIKE '%l%'
+
+table: 레코드,, alter...
+
+테이블명 대신 SELECT문 넣기..
+
+SELECT * FROM (SELECT * FROM test WHERE age > 20) WHERE name LIKE '%k%'
+
+rownum이 2 ~ 4 조회
+
+SELECT * FROM
+(SELECT rownum rnum, name, age FROM test) 
+WHERE rnum BETWEEN 2 AND 4
+
+원 SELECT에서 ORDER BY (정렬) 조건이 들어가면,
+별도의 SELECT문을 이용하여 ROWNUM 컬럼을 넣어줘야함.
+SELECT문 안에 SELECT문이 들어가는 것은 '서브커리'
+
+rownum이 2 ~ 4 조회하는데
+age가 오름차순
+
+SELECT * FROM(
+SELECT rownum rnum, name, age FROM 
+(SELECT name, age FROM test ORDER BY age ASC)
+) WHERE rnum BETWEEN 2 AND 4
+
+DB에 데이터를 저장한 상태에서
+컬럼 하나만을 이용해서
+특정 레코드 하나만을 조회하고 싶어.
+--> 기본키 = 주키 = primary key(pk)
+
+CREATE TABLE member2(
+id VARCHAR2(6),
+name VARCHAR2(6),
+age NUMBER(3)
+)
+
+ALTER TABLE member2 ADD CONSTRAINT pk_member2_id PRIMARY KEY(id)
+
+기본키를 설정하면,
+기본키에 대한 중복을 허용하지 않는다.
+unique constraint
+
+INSERT INTO member2 VALUES ('m001', 'kim', 30)
+INSERT INTO member2 VALUES ('m002', 'kim', 30)
+INSERT INTO member2 VALUES ('m003', 'kim', 30)
+INSERT INTO member2 VALUES ('m004', 'kim', 30)
+INSERT INTO member2 VALUES ('m005', 'kim', 30)
+INSERT INTO member2 VALUES ('m006', 'kim', 30)
+INSERT INTO member2 VALUES ('m007', 'kim', 30)
+
+기본키를 설정하면
+기본키에 대해 NOT NULL 제약조건이 추가된다.
+INSERT INTO member2 (id, name, age) VALUES ('m008', 'lee', 44)
+
+
+SELECT * FROM member2 WHERE id = 'm003'
+
+member 테이블의 mid 컬럼을 주키(=기본키=pk=primary key)로 설정하시오.
+ALTER TABLE member ADD CONSTRAINT pk_member_mid PRIMARY KEY(mid)
+
+CREATE TABLE test2(
+id VARCHAR2(6) PRIMARY KEY,
+age NUMBER(3)
+)
+
+
+CREATE TABLE test3(
+id VARCHAR2(6),
+age NUMBER(3),
+CONSTRAINT pk_test3_id PRIMARY KEY(id)
+)
+
+처음 배웠던 방법만 알고 있으면,
+두가지 방법도 할 수있음
+
+========================================
+
+외래키 = foreign key = fk
+당신이 좋아하는 음식을 다음 중에서만 고르시오.
+1. 갈비
+2. 떡볶이
+3. 된장찌개
+4. 김치찌개
+
+나는 피자..X
+1~4 중에서만 선택하라고 했는데, 피자를 선택하다니..
+이런 일 없게 하자.
+
+
+CREATE TABLE depart(
+edep VARCHAR2(9)
+)
+
+외래키(=foreign key=fk)가 되려면, 반드시 다른 테이블의 기본키(=주키=primary key= pk)이어야 한다.
+ALTER TABLE depart ADD CONSTRAINT pk_depart_edep PRIMARY KEY(edep)
+
+INSERT INTO depart VALUES ('인사부')
+INSERT INTO depart VALUES ('홍보부')
+INSERT INTO depart VALUES ('연구실')
+INSERT INTO depart VALUES ('영업부')
+COMMIT
+
+CREATE TABLE employee(
+eid VARCHAR2(6),
+ename VARCHAR2(6),
+edep VARCHAR2(9)
+)
+
+eid를 pk로 설정하시오.
+ALTER TABLE employee ADD CONSTRAINT pk_employee_eid PRIMARY KEY(eid)
+
+ALTER TABLE employee ADD CONSTRAINT fk_employee_edep FOREIGN KEY(edep) REFERENCES depart(edep)
+
+//edep에서는 인사부/홍보부/연구실/영업부/만 들어갈 수 있음.
+INSERT INTO employee (eid, ename, edep) VALUES ('e001', 'kim', '인사부')
+INSERT INTO employee (eid, ename, edep) VALUES ('e002', 'lee', '홍보부')
+INSERT INTO employee (eid, ename, edep) VALUES ('e003', 'park', '연구실')
+INSERT INTO employee (eid, ename, edep) VALUES ('e004', 'choi', '영업부')
+밑에는 입력이 안 됨. 부모테이블의 데이터에 '비서실'이 없음. 참조무결성 제약조건에 위반 됨.
+INSERT INTO employee (eid, ename, edep) VALUES ('e005', 'jung', '비서실')
+
+외래키는 NULL 값이 들어갈 수 있음.
+INSERT INTO employee (eid, ename) VALUES ('e006', 'kim')
+
+COMMIT
+
+SELECT * FROM employee
+
+CREATE TABLE depart2(
+edep2 VARCHAR2(9)
+)
+
+ALTER TABLE depart2 ADD CONSTRAINT pk_depart2_edep PRIMARY KEY(edep2)
+
+INSERT INTO depart2 VALUES ('인사부')
+INSERT INTO depart2 VALUES ('홍보부')
+INSERT INTO depart2 VALUES ('연구실')
+INSERT INTO depart2 VALUES ('영업부')
+
+CREATE TABLE employee2(
+eid2 VARCHAR2(6),
+ename2 VARCHAR2(6),
+edep VARCHAR2(9)
+)
+
+ALTER TABLE employee2 ADD CONSTRAINT pk_employee2_eid2 PRIMARY KEY(eid2)
+ALTER TABLE employee2 ADD CONSTRAINT fk_employee2_edep FOREIGN KEY(edep) REFERENCES depart2(edep2)
+
+INSERT INTO employee2 (eid2, ename2, edep) VALUES ('e001', 'kim', '인사부')
+INSERT INTO employee2 (eid2, ename2, edep) VALUES ('e002', 'lee', '홍보부')
+INSERT INTO employee2 (eid2, ename2, edep) VALUES ('e003', 'park', '연구실')
+INSERT INTO employee2 (eid2, ename2, edep) VALUES ('e004', 'choi', '영업부')
+INSERT INTO employee2 (eid2, ename2, edep) VALUES ('e005', 'jung', '비서실')
+
+DELETE FROM employee2 WHERE eid2 = 'e005'
+DELETE FROM employee2 WHERE eid2 = 'e001'
+
+SELECT * FROM employee2
+
+SELECT * FROM member
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -21,6 +21,10 @@ public class MainEx {
 //		dao2.insert(dto);
 		
 		dao2.delete(new MemberDTO("m009", null, null, null));
+		
+		MemberDTO odto = dao2.selectByMid("m005");
+		
+		MemberDTO dto = new MemberDTO("m005", "lee", odto.getJob(), odto.getBirth());
 	}
 
 }

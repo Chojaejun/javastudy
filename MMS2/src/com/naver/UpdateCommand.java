@@ -2,32 +2,23 @@ package com.naver;
 
 import java.util.Scanner;
 
-public class UpdateCommand implements Command {
+public class Updatecommand implements Command {
 
 	@Override
 	public void execute(Scanner sc) {
-		System.out.println("수정할 id를 입력해 주세요.");
-		String id = sc.nextLine();
+		System.out.println("이름 수정을 시작합니다.");
+		System.out.println("아이디를 입력하세요.");
+		String mid = sc.nextLine();
 		
-		System.out.println("새로운 name을 입력해 주세요.");
+		System.out.println("새로운 이름을 입력하세요.");
 		String name = sc.nextLine();
 		
-		System.out.println("새로운 age를 입력해 주세요.");
-		int age = sc.nextInt();
-		sc.nextLine();
+		MemberDTO dto = new MemberDTO(mid, name, null, null);
 		
-		MemberDTO dto = new MemberDTO(id, name, age);
+		MemberDAO dao = new MemberDAO();
 		
-		int idx = DB.db.indexOf(new MemberDTO(id, name, age));
-		DB.db.set(idx, dto);
-		
-		
-		
-	}
-	@Override
-	public String toString() {
-		return "수정";
+		dao.update(dto);
+
 	}
 
-	
 }

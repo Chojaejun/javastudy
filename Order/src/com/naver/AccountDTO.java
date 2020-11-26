@@ -1,29 +1,24 @@
 package com.naver;
 
 import java.io.Serializable;
-import java.sql.Date;
 
-public class MemberDTO implements Serializable {
+public class AccountDTO implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private String mid;
-	private String name;
-	private String job;
-	private Date birth;
+	private int point;
 	
-	public MemberDTO() {
+	public AccountDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MemberDTO(String mid, String name, String job, Date birth) {
+	public AccountDTO(String mid, int point) {
 		super();
 		this.mid = mid;
-		this.name = name;
-		this.job = job;
-		this.birth = birth;
+		this.point = point;
 	}
 
 	public String getMid() {
@@ -34,28 +29,12 @@ public class MemberDTO implements Serializable {
 		this.mid = mid;
 	}
 
-	public String getName() {
-		return name;
+	public int getPoint() {
+		return point;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getJob() {
-		return job;
-	}
-
-	public void setJob(String job) {
-		this.job = job;
-	}
-
-	public Date getBirth() {
-		return birth;
-	}
-
-	public void setBirth(Date birth) {
-		this.birth = birth;
+	public void setPoint(int point) {
+		this.point = point;
 	}
 
 	public static long getSerialversionuid() {
@@ -64,7 +43,7 @@ public class MemberDTO implements Serializable {
 
 	@Override
 	public String toString() {
-		return "MemberDTO [mid=" + mid + ", name=" + name + "]";
+		return "AccountDTO [mid=" + mid + ", point=" + point + "]";
 	}
 
 	@Override
@@ -83,7 +62,7 @@ public class MemberDTO implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		MemberDTO other = (MemberDTO) obj;
+		AccountDTO other = (AccountDTO) obj;
 		if (mid == null) {
 			if (other.mid != null)
 				return false;
@@ -91,6 +70,7 @@ public class MemberDTO implements Serializable {
 			return false;
 		return true;
 	}
+	
 	
 
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\workspace_java\MMS4"/>
+			<item value="C:\workspace_java\MMS3"/>
+			<item value="C:\Users\EZEZ\Desktop\MMS2\MMS2"/>
+			<item value="C:\workspace_java\MapEx2"/>
+			<item value="C:\workspace_java\MMS5"/>
+			<item value="C:\workspace_java\MMS2"/>
+			<item value="C:\workspace_java\SwitchCaseEx"/>
+			<item value="C:\workspace_java\Test2"/>
+			<item value="C:\workspace_java\OperatorEx2"/>
+			<item value="C:\workspace_java\OperateorEx"/>
+			<item value="C:\workspace_java\InstanceEx"/>
+			<item value="C:\workspace_java\ConstructorEx"/>
+			<item value="C:\workspace_java\OverloadingEx"/>
+			<item value="C:\workspace_java\MethodEx"/>
+			<item value="C:\workspace_java\TypeEx"/>
+			<item value="C:\workspace_java\HelloWorld"/>
+			<item value="C:\workspace_java\VariableEx"/>
+			<item value="C:\workspace_java\Test1"/>
+			<item value="C:\workspace_java\ArrayEx"/>
+			<item value="C:\Users\EZEZ\Desktop\TPjava-main (1)\TPjava-main"/>
+			<item value="C:\workspace_java\ListEx2"/>
+			<item value="C:\workspace_java\MapEx"/>
+			<item value="C:\workspace_java\SetEx"/>
+			<item value="C:\workspace_java\ListEx"/>
+			<item value="C:\workspace_java\ForEx"/>
+			<item value="C:\workspace_java\IfEx"/>
+			<item value="C:\workspace_java\MMS1"/>
+			<item value="C:\workspace_java\lotto"/>
+			<item value="C:\workspace_java\WhileEx"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\workspace_java\StringEx"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="692"/>
+		<item key="DIALOG_Y_ORIGIN" value="200"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>nani</title>
+</head>
+<body>
+<input placeholder="아이디를 입력하세요.">
+<br>
+Hello world
+Hello		world
+<form action="">
+<input placeholder="아이디를 입력하세요.">
+
+</form>
+
+</body>
+</html>

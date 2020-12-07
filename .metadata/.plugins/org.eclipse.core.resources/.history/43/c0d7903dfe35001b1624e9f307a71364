@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 페이지</title>
+</head>
+<body>
+<h1>회원가입</h1>
+
+<form action="">
+<input name="id" placeholder="아이디를 입력해주세요.">
+
+</form>
+
+</body>
+</html>

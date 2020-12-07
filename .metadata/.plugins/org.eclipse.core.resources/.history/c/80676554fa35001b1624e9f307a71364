@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test is test</title>
+</head>
+<body>
+
+Hello world
+Hello		world
+
+<form action="">
+
+	<input name="id" placeholder="아이디를 입력하세요.">
+	<br>
+	<input type="passworld" name="pw" placeholder="비밀번호를 입력하세요.">
+
+</form>
+
+
+</form>
+
+</body>
+</html>

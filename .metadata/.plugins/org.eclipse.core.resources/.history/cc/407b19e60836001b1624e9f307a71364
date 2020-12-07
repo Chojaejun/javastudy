@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>재준동산 회원가입 페이지</title>
+</head>
+<body>
+<h1>재준동산 회원가입</h1>
+
+<form action="a.html" method="post">
+
+<label for="id">재준동산 아이디: </label>
+<input id="id" name="id" placeholder="재준동산 아이디 입력"><button>중복검사</button>
+<br>
+<label for="pw1">재준동산 비밀번호 입력</label>
+<input id="pw1" type="password" name="pw1" placeholder="재준동산 비밀번호 입력">
+<br>
+<label for="pw2">재준동산 비밀번호 확인: </label>
+<input id="pw2" type="password" name="pw2" placeholder="재준동산 비밀번호 확인">
+<br>
+<label for="name">재준동산 이름 입력: </label>
+<input id="name" name="name" placeholder="재준동산 이름 입력">
+<br>
+<label for="birth">재준동산 생년월일: </label>
+<input type="date" id="birth" name="birth">
+<br>
+<label for="tel">재준동산 전화번호: </label>
+<input type="tel" id="tel" name="tel">
+<br>
+<label for="email">재준동산 이메일: </label>
+<input type="email" id="email" name="email">
+<br>
+<br>
+<label>좋아하는 것 고르기</label>
+<br>
+<input id="joun1" type="radio" name="jun" value="jun1">
+<label>재준이</label>
+<input id="joun2" type="radio" name="jun" value="jun2">
+<label>조재준</label>
+<input id="joun3" type="radio" name="jun" value="jun3">
+<label>조재준이</label>
+<input id="joun4" type="radio" name="jun" value="jun4">
+<label>재준이이이이</label>
+<br>
+<br>
+<label>싫어하는 것 고르기</label>
+<br>
+<input id="joun5" type="radio" name="jun" value="jun5">
+<label>재준이 다침</label>
+<input id="joun6" type="radio" name="jun" value="jun6">
+<label>재준이 아픔</label>
+<input id="joun7" type="radio" name="jun" value="jun7">
+<label>재준이 슬픔</label>
+<input id="joun8" type="radio" name="jun" value="jun8">
+<label>재준이 배고픔</label>
+<br>
+<input type="submit" value="재준동산 가입">
+
+
+</form>
+
+
+
+
+
+</body>
+</html>

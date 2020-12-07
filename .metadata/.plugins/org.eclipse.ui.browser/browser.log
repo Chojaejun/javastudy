@@ -1,0 +1,5 @@
+
+12월 07, 2020 09:17:07.982 NEW SESSION
+12월 07, 2020 09:17:07.982 [1144:10656:1207/091707.980:ERROR:device_event_log_impl.cc(211)] [09:17:07.980] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+12월 07, 2020 09:27:04.649 [1207/092704.648:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+12월 07, 2020 12:02:51.403 [1144:4652:1207/120251.403:ERROR:connection_factory_impl.cc(428)] Failed to connect to MCS endpoint with error -105

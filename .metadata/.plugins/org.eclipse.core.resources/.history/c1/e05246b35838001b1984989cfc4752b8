@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 헤더태크는 블락태그 = 한줄을 다 먹음. 위 아래로 띄어쓰기 -->
+<h1>hello</h1>
+<h2>hello</h2>
+<h3>hello</h3>
+<h4>hello</h4>
+<h5>hello</h5>
+<h6>hello</h6>
+
+<!-- p태그는 자동 줄바꿈 안됨. html에서 줄바꿈은 <br>-->
+<p>
+	안녕하세요?
+	조재준입니다.
+</p>
+<!-- span태그는 인라인태그 글에 색이나 줄을 사용하고 싶을 때 사용 -->
+<p>
+	다름이 아니라
+	내일부터 쌍방향 <span style="color: red;">온라인 수업</span>이 진행됨을 알려 드립니다.
+</p>
+
+
+<div>
+
+	<img style="width: 25%;height: 25%;" alt="4k image" src="test.jpg"><br>
+	<p>4K image</p>
+
+</div>
+
+<!-- 시멘틱태그란 의미가 있는 태그명 -->
+<section>
+	<article>
+	<!-- i태그와 em태그의 기울어짐 효과는 같지만 i를 쓰면 기울기, em은 강조에 사용 -->
+	<!-- mark태그는 시멘틱요소 형관펜으로 칠한 효과 -->
+	<i>2020년 12월 8일(화) 0시부터</i> <em>대한민국 수도와 수도권 지역</em>에 <mark style="background-color: pink;">사회적 거리두기 2.5 단계</mark>가
+	전격적으로 시행됩니다. 국민 여러분의 많은 참여 부탁드립니다. KBS 조재준 기자였습니다.
+	
+	</article>
+
+
+</section>
+
+<p>I am <del>a</del> happy</p>
+<p>This is <ins>an</ins> apple</p>
+
+<p>원주율이 <strong>3.14</strong>인 것을 강조합니다.</p>
+<p>그냥 <b>굵게</b> 표현하고 싶습니다.</p>
+
+<p>WHO<sup>주)세계보건기구</sup>는 오늘 쉽니다.</p>
+<p>E = mc<sup>2</sup></p>
+<p>H<sub>2</sub>O</p>
+<p>H2O</p>
+
+<!-- 문장중에 ""를 사용할 때는 <q>입력문자</q>를 사용한다. -->
+<p>그는 <q>안녕하세요</q>라고 말했다.</p>
+<p>그는 이렇게 말했다.
+</p>
+<!-- 들여쓰기를 할 때는 <blochquote>내용입력</blockquoute>를 사용한다. -->
+<blockquote>안녕하세요.</blockquote>
+
+<!-- <abbr>문장입력</abbr> 은 축약된 단어임을 나타냄 -->
+<abbr title="낄때 끼고 빠질 때 빠진다.">낄끼빠빠</abbr>을 할 줄 알아야 한다.
+<br>
+<abbr title="스크린 샷">스샷</abbr> 조금 전에 가르쳐 주었습니다.
+
+<p>hello</p>
+<!-- 아랍어 사용처럼 글을 반대로 써야할 때 사용 <dbo dir="rtl">입력문자</dbo> -->
+<p><bdo dir="rtl">hello</bdo></p>
+
+<!-- 그림을 눌렀을 때 그 사이트로 이동하고 싶을 때는 <a>태그로 묶어준다. -->
+<a href="https://www.nate.com"><img alt="4k image" src="test.jpg" style="width: 50%; height: 50%;"></a>
+<br>
+<img alt="4k image" src="test.jpg" style="width: 200px; height: 200px;" usemap="#myMap">
+
+<map name="myMap">
+	<area alt="이미지의 왼쪽" shape="rect" coords="0,0,100,100" href="https://www.google.com">
+	<area alt="이미지의 우측" shape="rect" coords="101,101,200,200" href="https://www.naver.com">
+
+</map>
+<!-- table은 표 -->
+<table>
+	<thead>
+		<tr>
+			<td>아이디</td>
+			
+		</tr>
+	</thead>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
